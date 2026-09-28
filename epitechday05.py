@@ -238,8 +238,7 @@ print(superheroes["Superman"]["location"]["city"])
 '''
 
 
-
-
+'''
 #task2.9
 superheroes = {
     "Batman": {
@@ -274,10 +273,11 @@ superheroes["Wolverine"] = {
 
 print(superheroes["Batman"]["aliases"])
 print(superheroes["Wolverine"])
+'''
 
 
 
-
+'''
 #task2.10
 for name, info in superheroes.items():
     print(name + ":")
@@ -303,3 +303,28 @@ numbers = {
 }
 
 print(max(numbers, key=numbers.get))
+'''
+
+
+#CHALLENGE
+def scrabble_score(word):
+    score = 0
+    for letter in word.upper():
+        if letter in "AEIOULNSTR":
+            score += 1
+        elif letter in "DG":
+            score += 2
+        elif letter in "BCMP":
+            score += 3
+        elif letter in "FHVWY":
+            score += 4
+        elif letter == "K":
+            score += 5
+        elif letter in "JX":
+            score += 8
+        elif letter in "QZ":
+            score += 10
+    return score
+
+word = input("Enter a word: ")
+print(scrabble_score(word))
