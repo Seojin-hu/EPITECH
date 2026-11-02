@@ -279,16 +279,21 @@ print(superheroes["Wolverine"])
 
 '''
 #task2.10
-for name, info in superheroes.items():
+for name in superheroes:
     print(name + ":")
-    aliases = info.get("aliases", [])
-    if aliases:
-        for alias in aliases:
+
+    if "aliases" in superheroes[name]:
+        for alias in superheroes[name]["aliases"]:
             print(alias)
     else:
         print("No aliases found.")
-    print()
 
+    print()
+'''
+
+
+
+'''
 #task2.11
 numbers = {
     "dalmatians": 101,
@@ -306,6 +311,8 @@ print(max(numbers, key=numbers.get))
 '''
 
 
+
+'''
 #CHALLENGE
 def scrabble_score(word):
     score = 0
@@ -328,3 +335,4 @@ def scrabble_score(word):
 
 word = input("Enter a word: ")
 print(scrabble_score(word))
+'''
